@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.lecture{
+    margin-top: 20px;
+    height: 550px;
+    width: 100%;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background: linear-gradient(to right, rgba(99, 50, 96, 0.865), rgba(41, 26, 83, 0.941), rgb(6, 12, 126)), url('https://edu.sqi.ng/wp-content/uploads/2023/07/sqihub.jpg');
+}
+
+.student{
+    display: flex;
+   justify-content: end;
+   align-items: center;
+  width: 93%;
+}
+
+.learn{
+    width: 40%;
+    margin-top: 30px;
+   
+}
+
+.learn h4{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 28px;
+    margin-top: 30px;
+}
+
+.learn div:nth-child(2){
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    line-height:23.8px;
+}
+
+.learn div:nth-child(3){
+    margin-top: 20px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    width: 95%;
+    line-height:23.8px;
+}
+
+.learn div:nth-child(4){
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 20px;
+    width: 95%;
+    line-height:23.8px;
+}
+
+.learn div:nth-child(5){
+    margin-top: 30px;
+}
+
+.learn button{
+    padding: 6px 40px 6px 14px;
+    line-height: 34px;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+@media (max-width:1020px) {
+    .student{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .learn{
+        width: 80%;
+    }
+}
+
+
+@media (max-width:500px){
+   .lecture{
+    height: 600px;
+   }
+
+   .learn{
+    width: 90%;
+}
+}

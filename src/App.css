@@ -1,38 +1,395 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+nav img{
+  height: 70px;
+}
+.new-left-side{
+  display: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.new-nav{
+  display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
   display: flex;
-  flex-direction: column;
   align-items: center;
+  height: 80px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  position: fixed;
+  background-color: #fff;
+}
+
+.all-nav{
+  height: 80px;
+}
+
+.left-nav{
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 40%;
 }
 
-.App-link {
-  color: #61dafb;
+.right-nav{
+  display: flex;
+  gap: 20px;
+  width: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.about,.program,.admission,.portal,.sqi,.news{
+  display: flex;
+  gap: 5px;
+  color: #081F89;
+  align-items: center;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+
+}
+
+.all-about-content, .all-program-content, .all-admin-content{
+position: absolute;
+top: 0;
+height: 200px;
+width: 100px;
+display: none;
+}
+
+.about:hover .all-about-content{
+  display: block;
+}
+.program:hover .all-program-content{
+  display: block;
+}
+
+.admission:hover .all-admin-content{
+  display: block;
+}
+.portal:hover .all-about-content{
+  display: block;
+}
+
+.down{
+  margin-top: 3px;
+}
+
+.about-content, .program-content, .admin-content{
+  position: absolute;
+  height: 150px;
+  width: 210px;
+  top: 53px;
+
+}
+
+.about-text, .program-text, .admin-text{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 20px 30px;
+  background-color: rgba(255, 255, 255, 0.64);
+  color: #000;
+  height: 50px;
+  transition: .4s ease;
+  border-top: 3px solid #081F89;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.program-text{
+  width: 180px;
+  height: 150px;
+}
+
+.admin-text{
+  width: 150px;
+  height: 150px;
+}
+
+.all-about-content:hover .about-text{
+  height: 85px;
+}
+
+.all-program-content:hover .program-text{
+  height: 185px;
+}
+
+.all-admin-content:hover .admin-text{
+  height: 175px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.left-side{
+  position: fixed;
+  left: 0;
+  top: 40%;
+  height: 100px;
+  width: 48px;
+  background-color: aquamarine;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.down-side{
+  position: fixed;
+  left: 45px;
+  bottom: 50px;
+  height: 40px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.whatsapp{
+  width: 60px;
+  height: 60px;
+  background-color: green;
+  border-radius: 50px;
+
+}
+
+.whatsapp-text{
+  height: 35px;
+  width: 200px;
+  background-color: goldenrod;
+  border-radius: 5px;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ gap: 3px;
+ font-family: Poppins;
+ font-weight: 400;
+ font-size: 14px;
+}
+
+.whatsapp-text span{
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+
+@media (max-width:1020px) {
+  .left-nav{
+    width: 27%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .right-nav{
+    width: 73%;
   }
 }
+
+@media (max-width:900px) {
+nav{
+  display: none;
+}
+.left-side{
+  display: none;
+}
+.new-nav{
+ height: 80px;
+ box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+ display: flex;
+ justify-content: center;
+}
+
+.new-left-side{
+  display: block;
+}
+
+
+.all-new-nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 79%;
+  position: relative;
+}
+
+
+.new-left img{
+  height: 44px;
+}
+
+.new-right button{
+  background: none;
+  font-size: 30px;
+  border: none;
+  color: #2EA3F2;
+  cursor: pointer;
+}
+
+.new-menu-content{
+  position: absolute;
+  left: 0;
+  top: 83px;
+  height: fit-content;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  transition: .4s ease;
+  border-top: 3px solid #2EA3F2;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: none;
+}
+.new-right:focus-within .new-menu-content{
+  display: block;
+}
+
+.new-sqi,.new-news{
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 16px;
+  color: #081F89;
+  border-bottom: 1px solid #F7F7F7;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.all-nav-menu{
+padding: 25px 25px;
+}
+.new-about,.new-program,.new-admission,.new-portal{
+  background-color: #F7F7F7;
+  padding: 15px 10px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 16px;
+  color: #081F89;
+  cursor: pointer;
+}
+.all-story{
+  margin-left: 30px;
+}
+
+.all-story div{
+ border-bottom: 1px solid #F7F7F7;
+  padding: 10px 25px;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 13px;
+  color: #081F89;
+  cursor: pointer;
+  
+}
+
+.all-story div:hover{
+  background-color: #F7F7F7;
+}
+.new-left-side{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+}
+
+.for-share{
+ position: relative;
+}
+
+.share button{
+  background: none;
+  font-size: 20px;
+  border: none;
+  color: rgb(220, 217, 217);
+  background-color: #121212;
+  padding: 10px;
+  border-radius: 0 8px 0 0;
+}
+
+.share-content{
+  position: absolute;
+  bottom:  -300px;
+  width: 100%;
+  height: 25vh;
+  background-color: #09090aa7;
+  transition: .9s ease-in-out;
+}
+.new-left-side:focus-within .share-content{
+  bottom:0;
+}
+
+.share-text p{
+  padding: 10px 0px;
+  text-align: center;
+  color: #fff;
+}
+
+.share-social{
+  display:flex ;
+  gap: 10px;
+  align-items: center;
+  background-color: #fff;
+  height: 20vh;
+}
+
+.share-social a{
+  text-decoration: none;
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 13px;
+  color: #fff;
+}
+
+.new-facebook{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: #3a579a;
+  color: #fff;
+  padding: 10px 5px;
+  height: fit-content;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+.new-twitter{
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: #01abf0;
+  color: #fff;
+  padding: 10px 5px;
+  height: fit-content;
+  border-radius: 5px;
+}
+
+.new-linkedln{
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 15px;
+  background-color: #117bb6;
+  color: #fff;
+  padding: 10px 5px;
+  height: fit-content;
+  border-radius: 5px;
+}
+
+
+}
+
+@media (max-width:580px){
+  .share-social{
+    display: flex;
+    flex-wrap: wrap;
+  }
+} 
